@@ -1,0 +1,3 @@
+<%= render :partial => 'shared/head_meta', :locals => {:isHome => true, :page=> nil} %>
+<%= paginate @rti_requests, left: 1, window: 1, right: 0, remote: true %>
+<%= render @rti_requests %>

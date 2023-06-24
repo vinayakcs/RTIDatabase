@@ -1,0 +1,8 @@
+// "bootstrap-sprockets" must be imported before "bootstrap" and "bootstrap/variables"
+@import "bootstrap-sprockets";
+@import "bootstrap";
+@import "bootstrap_carousel_theme.scss";
+@import "variables.scss";
+@import "mixins.scss";
+@import "main.scss";
+@import "rti_requests.scss";

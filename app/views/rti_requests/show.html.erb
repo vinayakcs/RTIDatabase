@@ -1,0 +1,25 @@
+<%= render :partial => 'shared/head_meta', :locals => {:isHome => false, :page=> @rti_request} %>
+<div class="jumbotron rti_request_partial">
+  <span class="label label-default">Dated: <%= @rti_request.filed_date.to_formatted_s(:long_ordinal) %></span>
+  <span class="label label-default">Views: <%= @rti_request.impressions_count %></span>
+
+  <p class="title"><%= @rti_request.title %></p>
+  <p><%=raw @rti_request.content %></p>
+
+  <p><span class="public_authority_label"><span class="italic-font"> Public Authority: </span><%= link_to @rti_request.public_authority.name, public_authority_path(@rti_request.public_authority) %></span> </p>
+
+  <p><span class="italic-font">Source: </span><%= link_to @rti_request.source_url, @rti_request.source_url %></p>
+
+  <p>
+    <% @rti_request.tags.each do |tag| %>
+    <%= link_to "#" + tag.name, tag_path(tag) %>
+    <% end %>
+  </p>
+
+  <div class="fb-like" data-href="http://www.rtidatabase.com/rti_requests/<%= @rti_request.url_token %>" data-layout="standard" data-action="like" data-show-faces="true" data-share="true"></div>
+
+  <div class="g-plusone" data-annotation="inline" data-width="300" data-href="http://www.rtidatabase.com/rti_request/<%= @rti_request.url_token %>"></div>
+
+</div>
+
+<div class="fb-comments" data-href="http://www.rtidatabase.com/rti_requests/<%= @rti_request.url_token %>" data-numposts="5" data-width="100%"></div>

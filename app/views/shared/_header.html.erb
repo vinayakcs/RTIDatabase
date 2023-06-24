@@ -1,0 +1,36 @@
+<div class="navbar-wrapper">
+  <div class="container">
+
+    <nav class="navbar navbar-inverse navbar-static-top">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <%= link_to "RTI Database (beta)", root_path, class: "navbar-brand" %>
+        </div>
+        <div id="navbar" class="navbar-collapse collapse">
+          <ul class="nav navbar-nav">
+
+            <li class= <%= 'active' if current_page?(root_path) %> > <%= link_to "Home", root_path %> </li>
+            <li class= <%= 'active' if current_page?(rti_requests_recent_path) %> > <%= link_to "Recent", rti_requests_recent_path %> </li>
+            <li class= <%= 'active' if current_page?(rti_requests_top_viewed_path) %> > <%= link_to "Top Viewed", rti_requests_top_viewed_path %> </li>
+            <li class= <%= 'active' if current_page?(new_feedback_path) %> > <%= link_to "Feedback", new_feedback_path %> </li>
+
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <p class="text-right">
+      Follow/Contact us:
+      <%= link_to image_tag("fb_icon.png", alt: "fb_icon", size: "30x30"), "https://www.facebook.com/rtidatabase", target: "_blank" %>
+      <%= link_to image_tag("google_icon.png", alt: "google_icon", size: "30x30"), "https://plus.google.com/u/0/b/108596900179837935987/108596900179837935987", target: "_blank" %>
+      <%= link_to image_tag("twitter_icon.png", alt: "twitter_icon", size: "30x30"), "https://twitter.com/rtidatabase", target: "_blank" %>
+    </p>
+  </div>
+</div>
+
+<hr class="featurette-divider">

@@ -1,0 +1,15 @@
+<div class="jumbotron rti_request_partial">
+
+  <p class="title"> <%= link_to rti_request.title, rti_request %> </p>
+  <p> <%=raw rti_request.content %> </p>
+
+  <p>
+    <% rti_request.tags.each do |tag| %>
+    <%= link_to "#" + tag.name, tag_path(tag) %>
+    <% end %>
+  </p>
+
+  <div class="fb-like" data-href="http://www.rtidatabase.com/rti_requests/<%= rti_request.url_token %>" data-layout="standard" data-action="like" data-show-faces="true" data-share="true"></div>
+
+  <div class="g-plusone" data-annotation="inline" data-width="300" data-href="http://www.rtidatabase.com/rti_request/<%= rti_request.url_token %>"></div>
+</div>

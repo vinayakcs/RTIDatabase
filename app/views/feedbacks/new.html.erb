@@ -1,0 +1,15 @@
+<%= form_for @feedback do |f| %>
+<%= render 'shared/error_messages', object: f.object %>
+<p><%= f.label :name %>
+  <%= f.text_field :name %></p>
+<p><%= f.label :email %>
+  <%= f.email_field :email %></p>
+<p><%= f.label :mobile %>
+  <%= f.phone_field :mobile, pattern: "[789]\\d{9}", title: "Enter Valid Mobile Number" %></p>
+<p><%= f.label :content, "Feedback" %>
+  <%= f.text_area :content %></p>
+
+<div class="g-recaptcha" data-sitekey="6Led5wgTAAAAAOgqKTzXtKvWvhwiUHPM4JJlqJfE"></div>
+
+<%= f.submit "Submit" %>
+<% end %>

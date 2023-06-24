@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en" itemscope itemtype="http://schema.org/Organization">
+
+  <head>
+    <%= csrf_meta_tag %>
+    <%= auto_discovery_link_tag(:rss, "http://www.rtidatabase.com/rssFeed.atom", {title: "RSS Feeds"}) %>
+    <%= yield(:head) %>
+    <title>RTI Database</title>
+    <%= render "shared/head_css_js" %>
+  </head>
+
+  <body>
+    <%= render "shared/sn_js" %>
+    <%= render "shared/header" %>
+    <div class="container">
+      <%= render "shared/notice" %>
+      <%= yield %>
+    </div>
+    <%= render "shared/footer" %>
+  </body>
+
+</html>

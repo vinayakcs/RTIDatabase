@@ -1,0 +1,2 @@
+module PublicAuthoritiesHelper
+end

@@ -1,0 +1,19 @@
+// Place all the styles related to the RtiRequests controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+
+.rti_request_partial {
+    background-color: rgb(255,255,255);
+    padding: 20px;
+    .title {
+        font-size: 25px;
+        font-weight: bold;
+    }
+    .content {
+        // max lines should be 4
+    }
+    p {
+        font-size: 19.5px;
+    }
+}

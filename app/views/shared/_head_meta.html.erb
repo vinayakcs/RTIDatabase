@@ -1,0 +1,67 @@
+<!-- from bootstrap basic template -->
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+<% if isHome ==true && page.nil?  %>
+<% content_for :head do %>
+         <meta name="description" content="A database of all RTI(Right to information act) questions and response from various Indian government departments.View RTI filings online from across states and departments. " />
+         <meta name="keywords" content="rti,right to information act,rti filings,rti database,rti pages,rti forms,rti online,rti online free,india rti,rti indian,rti free,rti documents,rti book,rti pdf" />
+	 <meta property="og:title" content="RTIDatabase"/>
+         <meta property="og:type" content="article"/>	
+	 <meta property="og:url" content="https://www.rtidatabase.com"/>	
+	 <meta property="og:image" content="http://www.rtidatabase.com/images/rtidatabase_logo.jpg"/>
+	 <meta property="og:description" content="A database of all RTI(Right to information act) questions and response from various Indian government departments.View RTI filings online from across states and departments." />
+	<meta property="fb:admins" content="<%#TODO%>"/>
+
+	<meta itemprop="name" content="RTIDatabase">
+	<meta itemprop="description" content="A database of all RTI(Right to information act) questions and response from various Indian government departments.View RTI filings online from across states and departments.">
+	<meta itemprop="image" content="http://www.rtidatabase.com/images/rtidatabase_logo.jpg">
+
+	<link rel="publisher" href="https://plus.google.com/<%#TODO%>"/>
+	<meta name="author" content="rtidatabase" />
+	<meta name="copyright" content="rtidatabase" />
+	<meta name="application-name" content="RTIDatabase" />
+	<meta name="description" content="A database of all RTI(Right to information act) questions and response from various Indian government departments.View RTI filings online from across states and departments." />
+	<meta name="keywords" content="rti,right to information act,rti filings,rti database,rti pages,rti forms,rti online,rti online free,india rti,rti indian,rti free,rti documents,rti book,rti pdf" />
+
+
+         <meta name="twitter:card" content="summary" />
+         <meta name="twitter:site" content="@RTIDatabase" />
+         <meta name="twitter:title" content="RTIDatabase" />
+         <meta name="twitter:description" content="A database of all RTI(Right to information act) questions and response from various Indian government departments.View RTI filings online from across states and departments. @RTIDatabase" />
+         <meta name="twitter:image" content="http://www.myshortflicks.com/images/rtidatabase_logo.jpg" />
+         <meta name="twitter:url" content="https://www.rtidatabase.com" />
+
+
+<% end %> 
+<% elsif isHome ==false && !page.nil? && page.instance_of?(RtiRequest)%>
+
+<% content_for :head do %>
+	 <meta property="og:title" content="<%=page.title.truncate(70)%>"/>	
+	 <meta property="og:url" content="<%#TODO%>"/>	
+	 <meta property="og:image" content="http://www.myshortflicks.com/images/rtidatabase_logo.jpg"/>
+	 <meta property="og:description" content="<%=page.content.truncate(150)%>" />
+
+	<meta name="author" content="<%=page.title.truncate(70)%>" />
+	<meta name="copyright" content="RTIDatabase" />
+	<meta name="application-name" content="RTIDatabase" />
+	<meta name="description" content="<%=page.content.truncate(150)%>" />
+	<meta name="keywords" content="<%=page.title.truncate(70)%>" />
+
+         <meta name="twitter:card" content="summary" />
+         <meta name="twitter:site" content="@RTIDatabase" />
+         <meta name="twitter:title" content="<%=page.title.truncate(70)%>" />
+         <meta name="twitter:description" content="<%=page.content.truncate(150)%>" />
+         <meta name="twitter:image" content="http://www.myshortflicks.com/images/rtidatabase_logo.jpg" />
+         <meta name="twitter:url" content="<%#TODO%>" />
+
+	<meta itemprop="name" content="<%=page.title.truncate(70)%>">
+	<meta itemprop="description" content="<%=page.content.truncate(150)%>">
+	<meta itemprop="image" content="http://www.rtidatabase.com/images/rtidatabase_logo.jpg">
+
+
+<% end %> 
+
+<%end%>
